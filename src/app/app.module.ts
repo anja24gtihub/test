@@ -1,18 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import * as $ from 'jquery';
+
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+
+import { RecipepuppyService } from './services/recipepuppy.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ButtonsModule.forRoot(),
+    AccordionModule.forRoot()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ RecipepuppyService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

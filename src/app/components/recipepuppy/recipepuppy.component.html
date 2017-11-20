@@ -1,0 +1,19 @@
+<div id="search-component">
+  <h2>Reciepes Search</h2>
+  <div class="input-group">
+    <input #searchByTerm id="search-by-term" placeholder="General search" (keyup)="getRecipes(searchByTerm.value, '')" />
+    <input #searchByIngredients id="search-by-ingredients" placeholder="Comma delimited ingredients" (keyup)="getRecipes('', searchByIngredients.value)"
+    />
+  </div>
+  <accordion [closeOthers]="true">
+    <accordion-group class="panel panel-warning" *ngFor="let recipe of recipes.results; let recipeIndex = index">
+      <div class="accordion-heading" accordion-heading>{{ recipe.title }}</div>
+      <div>
+        <div>
+          <img src="{{ recipe.thumbnail }}" />
+        </div>
+        <div><b>Ingredients:</b> {{ recipe.ingredients }}</div>
+      </div>
+    </accordion-group>
+  </accordion>
+</div>

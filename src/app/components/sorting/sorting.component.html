@@ -1,0 +1,47 @@
+<div class="container">
+ 
+  <div *ngFor="let power of arrayOfPowers">
+    {{ power }}
+    <br />
+  </div>
+
+  <div class="btn-group">
+    <button class="btn btn-warning" (click)="generateArrayOfPowers()">
+      Generate Array Of Powers
+    </button>
+    <button class="btn btn-warning" (click)="quickSort(arrayOfPowers)">
+      Sort Array Of Powers
+    </button>
+  </div>
+  <div style="margin: 10px 0;"></div>
+  <div *ngFor="let sortedPower of arrayOfPowersSorted">
+    {{ sortedPower }}
+    <br />
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="btn-group">
+    <button class="btn btn-warning" (click)="generateRandomArray()">
+      Generate Random Array
+    </button>
+    <button class="btn btn-warning" (click)="sortRandomArray(randomArray)">
+      Sort Random Array
+    </button>
+  </div>
+
+  <div>
+    <div style="width: 250px; display: inline-block;">
+      <div *ngFor="let number of randomArray">
+        <span>{{ number }}</span>
+      </div>
+    </div>
+    <div style="width: 250px; display: inline-block;">
+      <div *ngFor="let sortedNumber of randomArraySorted" style="width: 250px; display: inline-block;">
+        {{ sortedNumber }}
+        <br />
+      </div>
+    </div>
+  </div>
