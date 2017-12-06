@@ -3,11 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import * as bignumber from 'bignumber.js';
 import { BigNumber } from 'bignumber.js';
 
-// import * as sorting from 'algorithms/sorting.js';
-// import { heapSort } from './heap_sort.js';
-import * as HeapSort from './heap_sort.js';
-
-
 @Component({
   selector: 'app-sorting',
   templateUrl: './sorting.component.html',
