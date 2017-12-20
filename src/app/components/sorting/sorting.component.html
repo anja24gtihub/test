@@ -1,5 +1,5 @@
 <div class="container">
- 
+
   <div *ngFor="let power of arrayOfPowers">
     {{ power }}
     <br />
@@ -9,7 +9,7 @@
     <button class="btn btn-warning" (click)="generateArrayOfPowers()">
       Generate Array Of Powers
     </button>
-    <button class="btn btn-warning" (click)="quickSort(arrayOfPowers)">
+    <button class="btn btn-warning" (click)="sortArrayOfPowers(arrayOfPowers)">
       Sort Array Of Powers
     </button>
   </div>

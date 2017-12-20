@@ -11,6 +11,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 import { RecipepuppyService } from './services/recipepuppy.service';
+import { SortingService } from './services/sorting.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { RecipepuppyService } from './services/recipepuppy.service';
     ButtonsModule.forRoot(),
     AccordionModule.forRoot()
   ],
-  providers: [ RecipepuppyService ],
+  providers: [ RecipepuppyService, SortingService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
